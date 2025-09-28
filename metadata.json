@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Copy of AI METAR Finder",
+  "description": "An AI-powered application to retrieve and decode METAR aviation weather reports for any airport. Enter an ICAO code to get the latest weather conditions, beautifully parsed and explained.",
+  "requestFramePermissions": []
+}

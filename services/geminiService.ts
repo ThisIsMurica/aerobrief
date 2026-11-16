@@ -231,12 +231,7 @@ const parseRawMetarWithGemini = async (rawMetar: string): Promise<MetarDataRespo
 export const getMetarData = async (icaoCode: string): Promise<MetarDataResponse> => {
   // Primary Method: AviationWeather.gov REST API
   try {
-    const response = await fetch(`https://aviationweather.gov/api/data/metar?ids=${icaoCode.toUpperCase()}&format=json`, {
-      headers: {
-        // The API requires a key. We'll use the one configured for Gemini.
-        'X-API-Key': process.env.API_KEY,
-      },
-    });
+    const response = await fetch(`https://aviationweather.gov/api/data/metar?ids=${icaoCode.toUpperCase()}&format=json`);
 
     if (!response.ok) {
       throw new Error(`AviationWeather API request failed with status ${response.status}`);
